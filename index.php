@@ -28,7 +28,7 @@
     }
     ?>
 
-
+<img src="pic.jpg">
 
 </body>
 
