@@ -2,7 +2,7 @@
 
 include "../src/autoload.php";
 
-use App\Core\Router;
+use App\core\Router;
 
 $obj = new Router();
 $obj->run();
