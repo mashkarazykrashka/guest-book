@@ -4,8 +4,6 @@
             echo "Добавить запись:";
             echo "<br>";
             
-            foreach ($fields as $val) {
-                echo $val;
                 echo "<input type='text' name=$val>";
             }
             ?>

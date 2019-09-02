@@ -1,21 +1,31 @@
 <?php
 
-abstract class feedbackController extends Controller
-{
-    public $table_name;
+namespace App\controller;
 
-    function __construct($view)
+class feedbackController extends Controller
+{
+    // public $feedback_file = conf::feedback_file;
+    // public $crud_feedback = conf::crud_feedback;
+
+    public $feedback_file = "feedback.php";
+    public $crud_feedback = CrudPhp;
+
+    function __construct()
     {
-        parent::__construct($view);
-        $this->table = new tableModel(new mysqli(conf::mysql_host, conf::mysql_username, conf::mysql_password, conf::mysql_db), $this->table_name);
-        $this->table->set_page_size(10);
+        // parent::__construct($view);
+        $this->feedback = new CrudPhp($this->feedback_file);
+    }
+
+    function actionAdd()
+    {
+        $this->feedback->add($_POST);
+        $this->redirect('?t=' . $this->classNameNP() . '&a=addForm');
     }
 
     function actionAddForm()
     {
         $this->render("addform", [
-            'fields' => array_diff($this->table->get_field(), ['id']),
-            'targetURL' => '?t=' . $this->classNameNP() . '&a=addrow'
+            'targetURL' => '?t=' . $this->classNameNP() . '&a=add'
         ]);
     }
 }
