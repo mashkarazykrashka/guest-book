@@ -1,11 +1,18 @@
 <?php
 
-namespace App\Model\Crud;
+namespace App\Model\DataStorage;
 
-abstract class CrudEntity implements CrudInterface
+abstract class CrudEntity implements StorageInterface
 {
 
     protected $file_name;
+
+    public function checkFileExists($file_content = '') 
+    {
+        if (!file_exists($this->file_name)) {
+            file_put_contents($this->file_name, $file_content);
+        }
+    }
 
     function __construct($file_name)
     {
@@ -42,13 +49,13 @@ abstract class CrudEntity implements CrudInterface
         /** 
          * @var array $new_array
         */
+
         $new_array = $this->get();
+        // print_r($new_array);
         $new_array[] = $data_array;
         $this->write_file($new_array);
 
     }
-
-    abstract public function get();
 
     abstract public function write_file(array $data_array);
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Model\Crud;
+namespace App\Model\DataStorage;
 
-interface CrudInterface {
+interface StorageInterface {
 
     public function get();
 

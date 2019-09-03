@@ -1,38 +1,35 @@
 <?php
-namespace App\controller;
 
-use App\view\View;
+namespace App\Controller;
 
-abstract class Controller
-{
+use App\View\View;
+use ReflectionClass;
+
+abstract class Controller {
+    
     public $view;
 
-    function __construct()
-    {
+    function __construct() {
         $this->view = new View();
     }
 
-    function render($viewName, $viewData = [])
-    {
+    function render($viewName, $viewData = []) {
         $this->view->render($viewName, $viewData);
     }
 
-    function redirect($location)
-    {
-        header("Location: " . $location);
+    function redirect($location) {
+        header ("Location: ".$location);
     }
 
-    function actionAbout(){
-        echo "ActionAbout";
+    function classNameNP() {
+        // (new ReflectionClass($this))->getShortName()
+        return strtolower(preg_replace('/Controller$/', '', (new ReflectionClass($this))->getShortName()));
     }
 
-    function classNameNP()
-    {
-        return strtolower(preg_replace('/Controller$/', '', get_class($this)));
-    }
-
-    function currentActionNameNP()
-    {
+    function currentActionNameNP() {
         return strtolower(preg_replace('/^action/', '', debug_backtrace()[1]['function']));
     }
+
 }
+
+?>

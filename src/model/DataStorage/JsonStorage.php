@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Model\Crud;
+namespace App\Model\DataStorage;
 
-class CrudJson extends CrudEntity
+class JsonStorage extends CrudEntity
 {
 
     function get()
     {
 
+        $this->checkFileExists();
         return json_decode(file_get_contents($this->file_name), true);
 
     }

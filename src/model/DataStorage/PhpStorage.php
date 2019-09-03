@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Model\Crud;
+namespace App\Model\DataStorage;
 
-class CrudPhp extends CrudEntity
+class PhpStorage extends CrudEntity
 {
 
     function get()
     {
 
+        $this->checkFileExists('<?php return [];');
         return include($this->file_name);
 
     }

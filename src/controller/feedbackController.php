@@ -1,31 +1,44 @@
 <?php
 
-namespace App\controller;
+namespace App\Controller;
 
-class feedbackController extends Controller
-{
-    // public $feedback_file = conf::feedback_file;
-    // public $crud_feedback = conf::crud_feedback;
+// use \App\Core\Config;
+use App\Model\DataStorage\Factory;
+use App\Core\Config;
 
-    public $feedback_file = "feedback.php";
-    public $crud_feedback = CrudPhp;
 
-    function __construct()
+class FeedBackController extends Controller {
+
+    protected $fileStorage;
+
+    public function __construct()
     {
-        // parent::__construct($view);
-        $this->feedback = new CrudPhp($this->feedback_file);
+        parent::__construct();
+        $this->view->setViewPath(__DIR__.'/../../templates/FeedBack/');
+        $this->fileStorage = Factory::newFileStorage(Config::FILE_NAME);
+        // echo get_class($this->fileStorage);
     }
 
-    function actionAdd()
-    {
-        $this->feedback->add($_POST);
-        $this->redirect('?t=' . $this->classNameNP() . '&a=addForm');
-    }
+    public function actionShowForm () {
 
-    function actionAddForm()
-    {
-        $this->render("addform", [
-            'targetURL' => '?t=' . $this->classNameNP() . '&a=add'
+        // (new Factory())->new_item('data.json');
+
+        $this->render("Form", [
+            'formPath' => '?t='.$this->classNameNP().'&a=AddFeedBack'
         ]);
     }
+
+    public function actionAddFeedBack() 
+    {
+        // print_r ($_POST);
+        $this->fileStorage->add($_POST);
+        $this->redirect('?t='.$this->classNameNP().'&a=thanks');
+    }
+
+    public function actionThanks() {
+        $this->render("thanks", []);
+    }
+
 }
+
+?>
