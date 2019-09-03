@@ -5,6 +5,8 @@ namespace App\Model\DataStorage;
 use App\Model\DataStorage\PhpStorage;
 use App\Model\DataStorage\SerializeStorage;
 use App\Model\DataStorage\JsonStorage;
+use App\Model\DataStorage\CSVstorage;
+
 
 class Factory
 {
@@ -22,6 +24,10 @@ class Factory
             return new SerializeStorage($fileName);
             break;
 
+        case 'csv':
+            return new CSVstorage($fileName);
+            break;
+            
         case 'json':
         default:
             return new JsonStorage($fileName);
