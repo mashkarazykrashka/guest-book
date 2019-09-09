@@ -5,15 +5,13 @@ namespace App\Model\DataStorage;
 use App\Model\DataStorage\PhpStorage;
 use App\Model\DataStorage\SerializeStorage;
 use App\Model\DataStorage\JsonStorage;
-use App\Model\DataStorage\CSVstorage;
-
 
 class Factory
 {
 
    public static function newFileStorage($fileName) 
    {
-    preg_match('/\.(.*)$/i', $fileName, $match);
+    preg_match('/\.([^\.]*)$/iu', $fileName, $match);
     $type = $match[1];
     switch ($type) {
         case 'php':
@@ -25,9 +23,9 @@ class Factory
             break;
 
         case 'csv':
-            return new CSVstorage($fileName);
+            return new CsvStorage($fileName);
             break;
-            
+
         case 'json':
         default:
             return new JsonStorage($fileName);

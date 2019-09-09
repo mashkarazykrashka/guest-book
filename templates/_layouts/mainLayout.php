@@ -36,6 +36,15 @@
                 <li class="nav-item active">
                     <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=TicTac&a=ShowField" role="button">TicTac<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item">
+                <li class="nav-item active">
+                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=FeedBackAdmin&a=Show" role="button">AdminPanel<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=Auth&a=LoginForm" role="button">login<span class="sr-only">(current)</span></a>
+                </li>
+                
                 <li class="nav-item active">
                     <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=feedback&a=ShowForm" role="button">FeedBack<span class="sr-only">(current)</span></a>
                 </li>
