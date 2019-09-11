@@ -1,22 +1,21 @@
 <?php
 
-namespace App\controller;
+namespace App\Controller;
 
-class siteController extends Controller
-{
-    function actionHome()
-    {
+class SiteController extends Controller {
+
+    function actionHome () {
         $this->render("home", [
-            'title' => "Home page",
-            'main' => "Welcome!!!"
+            'title' => "Welcome"
         ]);
     }
 
-    function actionAbout()
-    {
+    function actionAbout () {
         $this->render("about", [
-            'title' => "About site",
-            'main' => "About!!!"            
+            'title' => "About Us"
         ]);
     }
+
 }
+
+?>

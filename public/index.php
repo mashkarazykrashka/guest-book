@@ -1,18 +1,7 @@
 <?php
-
+session_start();
 include "../src/autoload.php";
-
-use App\core\Router;
-
+use App\Core\Router;
 $obj = new Router();
 $obj->run();
-
-
-
-
-
-
-
-
-
 ?>

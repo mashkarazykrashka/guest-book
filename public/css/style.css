@@ -1,6 +1,12 @@
 body {
-    background: rgb(105, 240, 222);
-    font-size: 20px;
-    color: blue;
+  background: rgb(105, 240, 222);
+  font-size: 20px;
+  color: blue;
 
+}
+
+.user_name {
+  color: red;
+  text-align: right;
+  margin-right: 20px;
 }

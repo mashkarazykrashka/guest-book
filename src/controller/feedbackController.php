@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+// use \App\Core\Config;
 use App\Model\DataStorage\Factory;
 use App\Core\Config;
 
@@ -31,8 +32,6 @@ class FeedBackController extends Controller {
     {
         // print_r ($_POST);
         $this->fileStorage->add($_POST);
-        // $this->fileStorage->get();
-
         $this->redirect('?t='.$this->classNameNP().'&a=thanks');
     }
 
