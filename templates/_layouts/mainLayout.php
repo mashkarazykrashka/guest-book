@@ -26,17 +26,21 @@
 
         <div class="collapse navbar-collapse" id="navbar1">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="btn btn-sm btn-outline-info my-2 my-sm-0 dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tables</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                         <a class="dropdown-item" href="?t=tableOne&a=showtable">Ведомость</a>
                         <a class="dropdown-item" href="?t=tableTwo&a=showtable">Анекдоты</a>
                     </div>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item active">
                     <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=TicTac&a=ShowField" role="button">TicTac<span class="sr-only">(current)</span></a>
                 </li> -->
                 <li class="nav-item">
+                <li class="nav-item active">
+                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=FeedBack&a=ShowForm" role="button">FeedBack<span class="sr-only">(current)</span></a>
+                </li>
+
                 <li class="nav-item active">
                     <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=FeedBackAdmin&a=Show" role="button">AdminPanel<span class="sr-only">(current)</span></a>
                 </li>
@@ -44,24 +48,26 @@
                 <li class="nav-item active">
                     <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=Auth&a=LoginForm" role="button">login<span class="sr-only">(current)</span></a>
                 </li>
-                
+
                 <li class="nav-item active">
-                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=FeedBack&a=ShowForm" role="button">FeedBack<span class="sr-only">(current)</span></a>
+                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=Auth&a=Logout" role="button">logout<span class="sr-only">(current)</span></a>
                 </li>
-                
+
                 <li class="nav-item active">
                     <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=site&a=about" role="button">About <span class="sr-only">(current)</span></a>
                 </li>
 
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-            </form> -->
+            </form>  -->
         </div>
     </nav>
-
-    <div id="maincontent">
+    <div class="user_name">
+        <?= $_SESSION['autorized_user'] ?? '' ?>
+    </div>
+    <div id='maincontent'>
         <?php $this->body(); ?>
     </div>
 </body>
