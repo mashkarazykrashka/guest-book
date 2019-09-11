@@ -1,4 +1,4 @@
-<table class="feedback_table">
+<table class="table table-sm">
 <?php 
 
 

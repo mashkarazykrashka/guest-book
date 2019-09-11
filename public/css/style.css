@@ -2,7 +2,7 @@ body {
   background: #93cfc0;
 }
 .user_name{
-  color: red;
+  color: #DC143C;
   text-align: right; 
   margin-right: 20px;
 }
@@ -58,6 +58,7 @@ textarea{
   height: 44px;
   border-radius: 4px;
   float:right;
+  margin-bottom: 20px;
   border: 1px solid #253737;
   background: #416b68;
   background-image: -ms-linear-gradient(top, #6da5a3 0%, #416b68 100%);
