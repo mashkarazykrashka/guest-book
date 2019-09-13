@@ -1,5 +1,5 @@
 <div class="formPosition">
-<h1>FeedBack</h1>
+<h2 style="text-align:center">FeedBack</h2>
 
 <form action="<?= $formPath ?>" method="post" class="feedback">
     <input type="text" name="nick" placeholder="Enter your name" class="name"><br>
@@ -9,6 +9,5 @@
 </form>
 
 </div>
-<div class='login'>
-    <a href='/login'>Login</a>
-</div>
+
+<h2 style="text-align:center"> <a href='/login' class="badge badge-pill badge-dark">Login</a></h2>
