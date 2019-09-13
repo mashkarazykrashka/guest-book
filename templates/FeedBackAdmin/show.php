@@ -7,7 +7,7 @@ foreach ($data as $id => $row) {
     foreach ($row as $value) {
         echo "<td>$value</td>";
     }
-    echo "<td><a href='$delURL&id=$id'>$id</a></td></tr>";
+    echo "<td><a href='$delURL$id'>$id</a></td></tr>";
 }
 
 ?>

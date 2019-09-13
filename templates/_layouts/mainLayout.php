@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title><?= $title ?></title>
@@ -14,32 +12,28 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="btn btn-outline-info my-2 my-sm-0" href="?t=site&a=home" role="button">Home</a><br>
+        <!-- <a class="btn btn-outline-info my-2 my-sm-0" href="?t=site&a=home" role="button">Home</a><br>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
 
         <div class="collapse navbar-collapse" id="navbar1">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                 <li class="nav-item active">
-                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=FeedBack&a=ShowForm" role="button">FeedBack<span class="sr-only">(current)</span></a>
+                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="/feedback" role="button">FeedBack<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=FeedBackAdmin&a=Show" role="button">AdminPanel<span class="sr-only">(current)</span></a>
+                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="/dashboard" role="button">AdminPanel<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=Auth&a=LoginForm" role="button">login<span class="sr-only">(current)</span></a>
+                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="/login" role="button">login<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=Auth&a=Logout" role="button">logout<span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="?t=site&a=about" role="button">About <span class="sr-only">(current)</span></a>
+                    <a class="btn btn-sm btn-outline-info my-2 my-sm-0" href="/logout" role="button">logout<span class="sr-only">(current)</span></a>
                 </li>
 
             </ul>

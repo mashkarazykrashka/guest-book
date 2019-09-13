@@ -1,70 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Kelly+Slab|Luckiest+Guy|Roboto+Slab");
 body {
-  background: #93cfc0;
+  background-color: aqua;
+  color: red;
 }
-.user_name{
-  color: #DC143C;
-  text-align: right; 
+
+body h1 {
+  font-family: 'Roboto Slab', serif;
+}
+
+#maincontent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formPosition {
+  margin-top: 50vh;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.user_name {
+  color: red;
+  text-align: right;
   margin-right: 20px;
 }
 
-.feedback {
-  margin: 0 auto;
-  margin-top: 20px;
-  max-width: 40%;
-  padding: 30px 30px 6px 30px;
-  border: 1px solid rgba(0,0,0,.8);
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(to right top, #051937, #004463, #007278, #3d9e74, #a9c46c);  overflow: hidden; 
+.feedBackForm {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-textarea{
-  background: rgba(255, 255, 255, 0.4); 
-  width: 100%;
-  height: 110px;
-  border: 1px solid rgba(255,255,255,.6);
-  border-radius: 4px;
-  background-clip: padding-box; 
-  display:block;
-  font-family: 'Open Sans', sans-serif;
-  font-size:18px;
-  font-weight: 300;
-  color:#fff;
-  padding-left:25px;
-  padding-right:20px;
-  padding-top:12px;
-  margin-bottom:20px;
-  overflow:hidden;
+.feedBackForm input,
+.feedBackForm textarea {
+  font-family: 'Roboto Slab', serif;
+  color: #666666;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  border: 2px solid #C4C4C4;
+  font-size: 0.9em;
+  width: 300px;
+  padding: 5px 0.5%;
 }
 
-.name {
-  width: 100%;
-  height: 48px;
-  border: 1px solid rgba(255,255,255,.4);
-  border-radius: 4px;
-  background-clip: padding-box; 
-  display:block;
-  font-family: 'Open Sans', sans-serif;
-  font-size:18px;
-  font-weight: 300;    
-  padding-left:20px;
-  padding-right:20px;
-  margin-bottom:20px;
-  background: rgba(255, 255, 255, 0.4);
+.feedBackForm input:hover, .feedBackForm input:focus,
+.feedBackForm textarea:hover,
+.feedBackForm textarea:focus {
+  border: 2px solid #6DC11A;
 }
 
-.button {
-  width: 138px;
-  height: 44px;
-  border-radius: 4px;
-  float:right;
+.feedBackForm textarea {
+  resize: vertical;
+  min-height: 170px;
+}
+
+.feedBackForm .feedBackButton {
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  border-bottom: 5px solid #2B8F16;
+  font-size: 0.9em;
+  width: 100px;
+  padding: 5px 0;
+  background-color: #6DC11A;
+  cursor: pointer;
+}
+
+.feedBackForm .feedBackButton:hover {
+  border-bottom: 3px solid #2B8F16;
+}
+
+.feedBackForm select {
+  font-family: 'Roboto Slab', serif;
+  color: #666666;
+  width: 45px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
   margin-bottom: 20px;
-  border: 1px solid #253737;
-  background: #416b68;
-  background-image: -ms-linear-gradient(top, #6da5a3 0%, #416b68 100%);
-  padding: 10.5px 21px;
-  border-radius: 6px;
-  box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
-  text-shadow: #333333 0 1px 0;
-  color: #e1e1e1;
+  border: 2px solid #C4C4C4;
+  font-size: 0.9em;
+  padding: 2px 5px;
+}
+
+.feedBackForm select:hover, .feedBackForm select:focus {
+  border: 2px solid #6DC11A;
 }
