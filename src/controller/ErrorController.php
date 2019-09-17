@@ -13,7 +13,7 @@ class ErrorController extends Controller {
     {
         parent::__construct();
         $this->view->setViewPath(__DIR__.'/../../templates/Error/');
-        $this->view->setLayoutsPath(__DIR__.'/../../templates/_layouts/errorLayout.php');
+        $this->view->setLayoutsPath(__DIR__.'/../../templates/_layouts/emptyLayout.php');
 
     }
 

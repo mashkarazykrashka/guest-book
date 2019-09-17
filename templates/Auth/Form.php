@@ -1,5 +1,5 @@
-<form action="<?= $formPath ?>" method="post">
-<input type="text" name="login" placeholder="login"><br>
-<input type="password" name="password" placeholder="password"><br>
-<input type="submit" value="Login">
+<form action="<?= $formPath ?>" method="post" class="feedback">
+<input type="text" name="login" placeholder="login" class="name" ><br>
+<input type="password" name="password" placeholder="password" class="name" ><br>
+<input type="submit" value="Login" class="button">
 </form>

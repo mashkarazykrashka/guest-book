@@ -22,7 +22,7 @@ class FeedBackAdminController extends Controller {
 
         $this->render("show", [
             'data' => $this->fileStorage->get(),
-            'delURL' => '?t='.$this->classNameNP().'&a=DelRow'
+            'delURL' => '/del'
 
         ]);
     }
@@ -35,7 +35,7 @@ class FeedBackAdminController extends Controller {
         // ]);
             // echo $_GET['id'];
     $this->fileStorage->del($_GET['id']);
-    $this->redirect('?t='.$this->classNameNP().'&a=Show');
+    $this->redirect('/dashboard');
 
 
 

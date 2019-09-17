@@ -15,6 +15,7 @@ class AuthController extends Controller
     {
         parent::__construct();
         $this->view->setViewPath(__DIR__ . '/../../templates/Auth/');
+        $this->view->setLayoutsPath(__DIR__.'/../../templates/_layouts/emptyLayout.php');
     }
 
     public function actionLoginForm()
@@ -34,7 +35,7 @@ class AuthController extends Controller
             $_POST['password'] == $users_array[$_POST['login']]
         ) {
             $_SESSION['autorized_user'] = $_POST['login'];
-            $this->redirect('?t=FeedBackAdmin&a=Show');
+            $this->redirect('/dashboard');
         } else {
             echo "Неверный логин или пароль!";
             exit();
@@ -45,7 +46,7 @@ class AuthController extends Controller
     public function actionLogout()
     {
         unset($_SESSION['autorized_user']);
-        $this->redirect('?t=site&a=home');
+        $this->redirect('/feedback');
     }
 
     public static function CheckRights(string $controllerName)
