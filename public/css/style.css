@@ -1,5 +1,6 @@
 body {
-  background: #93cfc0;
+  background-image: linear-gradient(to right top, #6fd16b, #6ac772, #68bc77, #67b27b, #68a77d, #69aa85, #6bad8d, #6eb095, #6ec2a9, #6cd5bf, #67e8d7, #5ffbf1);
+  height: 100vh;
 }
 .user_name{
   color: #DC143C;
